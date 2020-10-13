@@ -3,6 +3,12 @@ import './LogIn.css'
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logos/logo.png'
 
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from '../../firebase.config';
+
+firebase.initializeApp(firebaseConfig);
+
 const LogIn = () => {
     return (
         <div>
