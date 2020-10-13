@@ -10,6 +10,7 @@ import {
 import Home from './Components/Home/Home/Home';
 import Nomatch from './Components/NoMatch/Nomatch';
 import LogIn from './Components/LogIn/LogIn';
+import Register from './Components/Register/Register';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             <Route path="/login">
               <LogIn></LogIn>
             </Route>
+              <Route path="/register">
+               <Register></Register>
+              </Route>
              <Route path="*">
                <Nomatch></Nomatch>
              </Route>
