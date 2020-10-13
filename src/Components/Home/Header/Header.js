@@ -1,14 +1,17 @@
+  
 import React from 'react';
-import HeaderMain from '../HeaderMain/HeaderMain';
 import Navbar from '../Navbar/Navbar';
+import HeaderMain from '../HeaderMain/HeaderMain';
 import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <main>
+            <div className="Header-Container">
             <Navbar></Navbar>
             <HeaderMain></HeaderMain>
-        </div>
+          </div>
+        </main>
     );
 };
 
