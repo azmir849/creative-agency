@@ -1,0 +1,41 @@
+.LogInLogo{
+    position: absolute;
+    width: 202.81px;
+    height: 60px;
+    left: 500px;
+    top: 80px;
+    
+}
+.LogInArea{
+    position: absolute;
+    width: 470px;
+    height: 357px;
+    left: 390px;
+    top: 171px;
+    background: #FFFFFF;
+    border: 2px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.LogInActivityArea{
+    position: absolute;
+    width: 457px;
+    height: 148px;
+    top: 125px;
+}
+.LogInActivityArea h3{
+    text-align: center;
+}
+pre{
+    text-align: center;
+}
+.LoginButton{
+    background-image: url('../../images/logos/googleLogo.png');
+    background-repeat: no-repeat;
+    width: 377px;
+    height: 41px;
+    margin-left: 40px;
+    border: 1px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 57px;
+}

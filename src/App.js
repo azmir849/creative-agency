@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Nomatch from './Components/NoMatch/Nomatch';
+import LogIn from './Components/LogIn/LogIn';
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+            <Route path="/login">
+              <LogIn></LogIn>
+            </Route>
              <Route path="*">
                <Nomatch></Nomatch>
              </Route>
