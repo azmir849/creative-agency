@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LogIn.css'
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logos/logo.png'
@@ -6,10 +6,34 @@ import Logo from '../../images/logos/logo.png'
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../firebase.config';
+import { useHistory } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
+    const history =useHistory();
+    const[user,setUser] = useState({
+        isSignedIn:false,
+        name:'',
+        email:''
+    })
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const handleSignIn= ()=>{
+        firebase.auth().signInWithPopup(provider)
+        .then(result=> {
+            const{displayName,email} = result.user;
+            const signedInUser ={
+                isSignedIn:true,
+                name:displayName,
+                email:email
+            }
+            setUser(signedInUser);
+            history.push('/register');
+          }).catch(error=> {
+            console.log(error);
+            console.log(error.message);
+          });
+    }
     return (
         <div>
             <div>
@@ -18,7 +42,7 @@ const LogIn = () => {
             <div className="d-flex justify-content-center LogInArea">
                 <div className="flex-column d-flex justify-content-center LogInActivityArea">
                     <h3>Login With</h3>
-                    <button  className="LoginButton ">Continue with Google</button>
+                    <button onClick={handleSignIn} className="LoginButton ">Continue with Google</button>
                     <pre>Don't have an account? <Link to="/register">Create an account</Link></pre>
                 </div>
             </div>
