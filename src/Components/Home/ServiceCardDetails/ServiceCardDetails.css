@@ -1,0 +1,12 @@
+.card img{
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.card{
+    margin: 30px;
+}
+
+.card:hover{
+    background-color: tan;
+}

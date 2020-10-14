@@ -30,7 +30,7 @@ function App() {
               <Route path="/register">
                <Register></Register>
               </Route>
-                 <Route path="/addService">
+                 <Route path="/service">
                    <AddService></AddService>
                  </Route>
              <Route path="*">
