@@ -11,28 +11,3 @@
 .AdminName{
     margin-top: -30px;
 }
-
-.servicePostArea{
-    width: 790px;
-    height: 400px;
-    background:snow;
-    border-radius: 20px;
-    margin-top: 60px;
-}
-.postContent{
-    margin-top: 5px;
-    margin-bottom: 25px;
-    margin-left: 40px;
-}
-
-.UploadButton{
-    background-color:  #DEFFED;
-    padding: 5px 30px;
-    border-radius: 10px;
-}
-
-.submitButton{
-    margin-left: 50px;
-    padding: 3px 25px;
-    border-radius: 10px;
-}
