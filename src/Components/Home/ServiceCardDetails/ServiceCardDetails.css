@@ -5,8 +5,12 @@
 
 .card{
     margin: 30px;
+    background: whitesmoke;
+    transition-property: background;
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
 }
 
 .card:hover{
-    background-color: tan;
+    background: #ff7b29;
 }
