@@ -28,7 +28,7 @@ const LogIn = () => {
                 email:email
             }
             setUser(signedInUser);
-            history.push('/register');
+            history.push('/addService');
           }).catch(error=> {
             console.log(error);
             console.log(error.message);

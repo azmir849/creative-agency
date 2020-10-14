@@ -11,6 +11,7 @@ import Home from './Components/Home/Home/Home';
 import Nomatch from './Components/NoMatch/Nomatch';
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
+import AddService from './Components/Admin/AdminPages/AddService/AddService';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
               <Route path="/register">
                <Register></Register>
               </Route>
+                 <Route path="/addService">
+                   <AddService></AddService>
+                 </Route>
              <Route path="*">
                <Nomatch></Nomatch>
              </Route>
