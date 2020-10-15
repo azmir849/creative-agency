@@ -55,13 +55,13 @@ const AddService = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="image">Icon</label>
-                            <input onChange={handleFileChange} type="file" className="form-control" name="image" placeholder="Upload image" />
+                            <input onChange={handleFileChange} type="file" className="form-control btn-success" name="image" placeholder="Upload image" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="title">Description</label>
-                            <input onBlur={handleBlur} type="text" className="form-control" name="description" placeholder="Enter Designation" />
+                            <textarea onBlur={handleBlur} type="textArea" className="form-control" name="description" rows="5" cols="23" placeholder="Enter Designation" />
                         </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                        <button onClick={handleSubmit} type="submit" className="btn btn-success">Submit</button>
                     </form>
                 </div>
             </div>

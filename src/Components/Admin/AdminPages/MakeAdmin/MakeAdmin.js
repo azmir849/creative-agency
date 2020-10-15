@@ -38,7 +38,6 @@ const MakeAdmin = () => {
                     <h6 className="">Add Services</h6>
                     <h6 className="d-flex AdminName justify-content-end">{loggedInUser.name}</h6>
 
-
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="title">Email</label>

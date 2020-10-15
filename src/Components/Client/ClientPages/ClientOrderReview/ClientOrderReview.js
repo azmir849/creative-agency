@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import './ClientOrderReview.css'
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../../App';
 import LOGO from '../../../../images/logos/logo.png'
@@ -46,9 +47,9 @@ const ClientOrderReview = () => {
                             <input onBlur={handleBlur} type="text" className="form-control" name="designation" placeholder="Company's name . Designation" />
                         </div>
                         <div className="form-group">
-                            <input onBlur={handleBlur} type="text" className="form-control" name="description" placeholder="Description" />
+                            <textarea onBlur={handleBlur} type="textArea" className="form-control" name="description"  placeholder="Description" />
                         </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                        <button onClick={handleSubmit} type="submit" className="btn btn-dark">Submit</button>
                     </form>
                 </div>
             </div>

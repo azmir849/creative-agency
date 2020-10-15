@@ -62,9 +62,9 @@ const ClientOrder = () => {
                             <input onBlur={handleBlur} type="text" className="form-control" name="price" placeholder="Price" />
                         </div>
                         <div className="form-group">
-                        <input onChange={handleFileChange} type="file" className="form-control" name="image" placeholder="Upload image" />
+                        <input onChange={handleFileChange} type="file" className="form-control btn-primary" name="image" placeholder="Upload image" />
                     </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                        <button onClick={handleSubmit} type="submit" className="btn btn-dark">Send</button>
                     </form>
                 </div>
             </div>

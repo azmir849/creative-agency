@@ -41,9 +41,9 @@ const HomeFooter = () => {
                                 <input onBlur={handleBlur} type="text" className="form-control" name="designation" placeholder="Your name / company's name" />
                             </div>
                             <div className="form-group">
-                                <input onBlur={handleBlur} type="text" className="form-control" name="description" placeholder="Your message" />
+                                <textarea onBlur={handleBlur} type="textArea"  className="form-control" name="description" placeholder="Your message" />
                             </div>
-                            <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                            <button onClick={handleSubmit} type="submit" className="btn btn-dark">Submit</button>
                         </form>
                     </div>
                     <div className="footer">
