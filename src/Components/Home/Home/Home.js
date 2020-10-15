@@ -1,4 +1,5 @@
 import React from 'react';
+import ClientsFeedback from '../ClientsFeedback/ClientsFeedback';
 import Header from '../Header/Header';
 import HomeCarousel from '../HomeCarousel/HomeCarousel';
 import ServiceCard from '../ServiceCard/ServiceCard';
@@ -12,6 +13,7 @@ const Home = () => {
           <ServiceSponsors></ServiceSponsors>
           <ServiceCard></ServiceCard>
           <HomeCarousel></HomeCarousel>
+          <ClientsFeedback></ClientsFeedback>
         </div>
     );
 };
