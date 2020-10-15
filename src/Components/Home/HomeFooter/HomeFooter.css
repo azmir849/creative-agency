@@ -1,0 +1,19 @@
+.FooterArea{
+    width: auto;
+    height: 600px;
+    background-color: #FBD062;
+}
+
+.Content{
+    margin-left: 80px;
+}
+.ContentArea{
+    margin-top: 50px;
+}
+
+.InputArea{
+    margin-left: 100px;
+}
+.footer{
+    margin-top: 295px;
+}
