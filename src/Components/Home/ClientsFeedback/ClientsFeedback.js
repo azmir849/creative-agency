@@ -18,7 +18,7 @@ const ClientsFeedback = () => {
     return (
         <section className="reviews-container mt-5">
             <div className="text-center">
-                <h2 className="reviewTitle">Provide awesome <span style={{color:'#7AB259'}}>reviews</span></h2>
+                <h2 className="reviewTitle">Clients <span style={{color:'#7AB259'}}>Feedback</span></h2>
             </div>
             <div className="d-flex justify-content-center ">
             <div className="w-95 feedBackArea row pt-2">
