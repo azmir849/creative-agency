@@ -15,6 +15,8 @@ import AddService from './Components/Admin/AdminPages/AddService/AddService';
 import ClientOrderReview from './Components/Client/ClientPages/ClientOrderReview/ClientOrderReview';
 import ClientOrder from './Components/Client/ClientPages/ClientOrder/ClientOrder';
 import ServiceList from './Components/Admin/AdminPages/ServiceList/ServiceList';
+import ClientOrderServiceList from './Components/Client/ClientPages/ClientOrderServiceList/ClientOrderServiceList';
+import MakeAdmin from './Components/Admin/AdminPages/MakeAdmin/MakeAdmin';
 
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
         <Route path="/login">
           <LogIn></LogIn>
         </Route>
+        <Route path="/addAdmin">
+          <MakeAdmin></MakeAdmin>
+        </Route>
         <Route path="/register">
           <Register></Register>
         </Route>
@@ -38,6 +43,9 @@ function App() {
         </Route>
         <Route path="/order">
          <ClientOrder></ClientOrder>
+        </Route>
+        <Route path="/orderList">
+         <ClientOrderServiceList></ClientOrderServiceList>
         </Route>
         <Route path="/serviceList">
           <ServiceList></ServiceList>
