@@ -7,7 +7,7 @@ const ClientOrderReview = () => {
 
     const handleBlur = e => {
         const newReview = { ...review };
-       newReview[e.target.name] = e.target.value;
+        newReview[e.target.name] = e.target.value;
         setReview(newReview);
         console.log(newReview)
     }

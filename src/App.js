@@ -13,6 +13,7 @@ import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import AddService from './Components/Admin/AdminPages/AddService/AddService';
 import ClientOrderReview from './Components/Client/ClientPages/ClientOrderReview/ClientOrderReview';
+import ClientOrder from './Components/Client/ClientPages/ClientOrder/ClientOrder';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/addService">
           <AddService></AddService>
+        </Route>
+        <Route path="/order">
+         <ClientOrder></ClientOrder>
         </Route>
         <Route path="/orderReview">
          <ClientOrderReview></ClientOrderReview>
