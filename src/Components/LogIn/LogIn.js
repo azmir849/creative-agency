@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './LogIn.css'
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logos/logo.png'
@@ -7,37 +7,40 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../firebase.config';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
-    const history =useHistory();
-    const[user,setUser] = useState({
-        isSignedIn:false,
-        name:'',
-        email:''
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
+    const [user, setUser] = useState({
+        isSignedIn: false,
+        name: '',
+        email: ''
     })
     const provider = new firebase.auth.GoogleAuthProvider();
-    const handleSignIn= ()=>{
+    const handleSignIn = () => {
         firebase.auth().signInWithPopup(provider)
-        .then(result=> {
-            const{displayName,email} = result.user;
-            const signedInUser ={
-                isSignedIn:true,
-                name:displayName,
-                email:email
-            }
-            setUser(signedInUser);
-            history.push('/addService');
-          }).catch(error=> {
-            console.log(error);
-            console.log(error.message);
-          });
+            .then(result => {
+                const { displayName, email } = result.user;
+                const signedInUser = {
+                    isSignedIn: true,
+                    name: displayName,
+                    email: email
+                }
+                setUser(signedInUser);
+                setLoggedInUser(signedInUser);
+                history.push('/order');
+            }).catch(error => {
+                console.log(error);
+                console.log(error.message);
+            });
     }
     return (
         <div>
             <div>
-                <img className="LogInLogo" src={Logo} alt=""/>
+                <img className="LogInLogo" src={Logo} alt="" />
             </div>
             <div className="d-flex justify-content-center LogInArea">
                 <div className="flex-column d-flex justify-content-center LogInActivityArea">

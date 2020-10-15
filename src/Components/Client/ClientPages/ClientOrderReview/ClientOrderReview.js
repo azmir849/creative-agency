@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../../App';
 import LOGO from '../../../../images/logos/logo.png'
 
 const ClientOrderReview = () => {
     const [review, setReview] = useState({});
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const handleBlur = e => {
         const newReview = { ...review };
@@ -28,13 +30,13 @@ const ClientOrderReview = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img className="LOGO" src={LOGO} alt="" />
-                    <h6 ><Link to="/serviceList">Order</Link></h6>
-                    <h6 > <Link to="/addService">Service list</Link></h6>
-                    <h6 > <Link to="/makeAdmin">Review</Link></h6>
+                    <h6 ><Link to="/order">Order</Link></h6>
+                    <h6 > <Link to="/orderList">Service list</Link></h6>
+                    <h6 > <Link to="/orderReview">Review</Link></h6>
                 </div>
                 <div class="col-md-8 ">
                     <h6 className="">Order</h6>
-                    <h6 className="d-flex AdminName justify-content-end">Pro Rasel</h6>
+                    <h6 className="d-flex AdminName justify-content-end">{loggedInUser.name}</h6>
 
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">

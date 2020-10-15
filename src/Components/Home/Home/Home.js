@@ -8,16 +8,16 @@ import ServiceSponsors from '../ServiceSponsors/ServiceSponsors';
 
 
 const Home = () => {
-    return (
-        <div>
-          <Header></Header>
-          <ServiceSponsors></ServiceSponsors>
-          <ServiceCard></ServiceCard>
-          <HomeCarousel></HomeCarousel>
-          <ClientsFeedback></ClientsFeedback>
-          <HomeFooter></HomeFooter>
-        </div>
-    );
+  return (
+    <div>
+      <Header></Header>
+      <ServiceSponsors></ServiceSponsors>
+      <ServiceCard></ServiceCard>
+      <HomeCarousel></HomeCarousel>
+      <ClientsFeedback></ClientsFeedback>
+      <HomeFooter></HomeFooter>
+    </div>
+  );
 };
 
 export default Home;

@@ -9,11 +9,11 @@ import airbnb from '../../../images/logos/airbnb.png'
 const ServiceSponsors = () => {
     return (
         <div className="mr-5 d-flex justify-content-center SponsorsContent">
-            <img src={slack} alt=""/>
-            <img src={google} alt=""/>
-            <img src={uber} alt=""/>
-            <img src={netflix} alt=""/>
-            <img src={airbnb} alt=""/>
+            <img src={slack} alt="" />
+            <img src={google} alt="" />
+            <img src={uber} alt="" />
+            <img src={netflix} alt="" />
+            <img src={airbnb} alt="" />
         </div>
     );
 };

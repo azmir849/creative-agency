@@ -12,7 +12,7 @@ const HomeCarousel = () => {
             <div className="container  my-3">
                 <div className="row mx-auto my-auto">
                     <div id="recipeCarousel" className="carousel slide carouselElement" data-ride="carousel">
-                    <h4 className="text-white carouselTitle">Here are some of <span style={{ color: "#7AB259" }}>our works</span></h4>
+                        <h4 className="text-white carouselTitle">Here are some of <span style={{ color: "#7AB259" }}>our works</span></h4>
                         <div className="carousel-inner" role="listbox">
                             <div className="carousel-item active d-flex justify-content-center">
                                 <img className="d-block col-4 img-fluid" src={caroImg1} />
