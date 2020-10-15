@@ -14,6 +14,7 @@ import Register from './Components/Register/Register';
 import AddService from './Components/Admin/AdminPages/AddService/AddService';
 import ClientOrderReview from './Components/Client/ClientPages/ClientOrderReview/ClientOrderReview';
 import ClientOrder from './Components/Client/ClientPages/ClientOrder/ClientOrder';
+import ServiceList from './Components/Admin/AdminPages/ServiceList/ServiceList';
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/order">
          <ClientOrder></ClientOrder>
+        </Route>
+        <Route path="/serviceList">
+          <ServiceList></ServiceList>
         </Route>
         <Route path="/orderReview">
          <ClientOrderReview></ClientOrderReview>

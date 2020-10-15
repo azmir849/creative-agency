@@ -42,7 +42,7 @@ const AddService = () => {
                 <h6 > <Link to="/makeAdmin">Make Admin</Link></h6>
             </div>
             <div class="col-md-8 ">
-                  <h6 className="">Add event</h6>
+                  <h6 className="">Add Services</h6>
                   <h6 className="d-flex AdminName justify-content-end">Sufi Ahamed</h6>
             
            
