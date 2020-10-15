@@ -12,32 +12,36 @@ import Nomatch from './Components/NoMatch/Nomatch';
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import AddService from './Components/Admin/AdminPages/AddService/AddService';
+import ClientOrderReview from './Components/Client/ClientPages/ClientOrderReview/ClientOrderReview';
 
 
 function App() {
   return (
     <Router>
-     <Switch>
-       <Route  exact path="/">
-         <Home></Home>
-       </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-            <Route path="/login">
-              <LogIn></LogIn>
-            </Route>
-              <Route path="/register">
-               <Register></Register>
-              </Route>
-                 <Route path="/service">
-                   <AddService></AddService>
-                 </Route>
-             <Route path="*">
-               <Nomatch></Nomatch>
-             </Route>
-    </Switch>
-  </Router>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/login">
+          <LogIn></LogIn>
+        </Route>
+        <Route path="/register">
+          <Register></Register>
+        </Route>
+        <Route path="/addService">
+          <AddService></AddService>
+        </Route>
+        <Route path="/orderReview">
+         <ClientOrderReview></ClientOrderReview>
+        </Route>
+        <Route path="*">
+          <Nomatch></Nomatch>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
