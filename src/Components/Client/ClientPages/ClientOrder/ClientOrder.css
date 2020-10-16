@@ -1,0 +1,16 @@
+#priceField{
+    width: 245px;
+    margin-left:15px;
+    margin-right: 15px;
+}
+#ProjectDetailsField{
+   height: 80px;
+}
+
+.OrderIcon::before{
+    content:url('../../../../images/icons/cart.png');
+}
+
+.reviewIcon::before{
+    content:url('../../../../images/icons/review.png');
+}

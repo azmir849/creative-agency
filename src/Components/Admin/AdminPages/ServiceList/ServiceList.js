@@ -23,9 +23,9 @@ const ServiceList = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img className="LOGO" src={LOGO} alt="" />
-                    <h6 ><Link to="/serviceList">Service list</Link></h6>
-                    <h6> <Link to="/addService">Add Service</Link></h6>
-                    <h6 > <Link to="/addAdmin">Make Admin</Link></h6>
+                    <h6 className="ServiceListIcon"><Link to="/serviceList">Service list</Link></h6>
+                    <h6 className="addServiceIcon"> <Link to="/addService">Add Service</Link></h6>
+                    <h6 className="adminIcon"> <Link to="/addAdmin">Make Admin</Link></h6>
                 </div>
                 <div class="col-md-8 ">
                     <h6 className="">Add Services</h6>

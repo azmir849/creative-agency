@@ -4,18 +4,36 @@
 }
 
 .LOGO{
-    width: 40%;
+    width: 60%;
     margin-bottom: 50px;
 }
-
+.ClientServiceInputArea{
+    width: 850px;
+    height: 275px;
+    background:floralwhite;
+    border-radius: 10px;
+}
+.ClientServiceInputArea form{
+   padding-left: 30px;
+   padding-top: 10px;
+}
+.ClientServiceInputArea button{
+    margin-top: 30px;
+    margin-right: 30px;
+}
 .AdminName{
     margin-top: -30px;
 }
-.TitleArea{
-    margin-bottom: 500px;
-}
+
 form{
     margin-top: 70px;
+}
+#inputTextAreaSize{
+    width: 400px;
+    height: 120px;
+}
+#inputTextSize{
+    width: 400px;  
 }
 
 form input[type="text"]{
@@ -23,5 +41,18 @@ form input[type="text"]{
 }
 
 form input[type="file"]{
-    width: 500px;
+    width: 240px;
+    margin-right: 10px;
+}
+
+.ServiceListIcon::before{
+    content:url('../../../../images/icons/service.png');
+}
+
+.addServiceIcon::before{
+    content:url('../../../../images/icons/plus.png');
+}
+
+.adminIcon::before{
+    content:url('../../../../images/icons/admin.png');
 }

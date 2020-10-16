@@ -21,9 +21,9 @@ const ClientOrderServiceList = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img className="LOGO" src={LOGO} alt="" />
-                    <h6 ><Link to="/order">Order</Link></h6>
-                    <h6 > <Link to="/orderList">Service list</Link></h6>
-                    <h6 > <Link to="/orderReview">Review</Link></h6>
+                    <h6 className="OrderIcon" ><Link to="/order">Order</Link></h6>
+                    <h6 className="ServiceListIcon" > <Link to="/orderList">Service list</Link></h6>
+                    <h6 className="reviewIcon"> <Link to="/orderReview">Review</Link></h6>
                 </div>
                 <div class="col-md-8 ">
                     <h6 className="">Order</h6>

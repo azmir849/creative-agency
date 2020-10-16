@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './MakeAdmin.css'
 import { UserContext } from '../../../../App';
 import LOGO from '../../../../images/logos/logo.png'
 
@@ -30,21 +31,25 @@ const MakeAdmin = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img className="LOGO" src={LOGO} alt="" />
-                    <h6 ><Link to="/serviceList">Service list</Link></h6>
-                    <h6> <Link to="/addService">Add Service</Link></h6>
-                    <h6 > <Link to="/addAdmin">Make Admin</Link></h6>
+                    <h6 className="ServiceListIcon"><Link to="/serviceList">Service list</Link></h6>
+                    <h6 className="addServiceIcon"> <Link to="/addService">Add Service</Link></h6>
+                    <h6 className="adminIcon"> <Link to="/addAdmin">Make Admin</Link></h6>
                 </div>
                 <div class="col-md-8 ">
                     <h6 className="">Add Services</h6>
                     <h6 className="d-flex AdminName justify-content-end">{loggedInUser.name}</h6>
 
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="title">Email</label>
-                            <input onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="xyz@gmail.com" />
-                        </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
-                    </form>
+                    <div className="ClientMakeInputArea">
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label htmlFor="title">Email</label>
+                                <div className="row">
+                                    <input onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="xyz@gmail.com" />
+                                    <button onClick={handleSubmit} type="submit" className="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

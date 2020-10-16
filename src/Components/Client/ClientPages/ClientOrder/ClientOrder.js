@@ -1,19 +1,20 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ClientOrder.css'
 import { UserContext } from '../../../../App';
 import LOGO from '../../../../images/logos/logo.png'
 
 const ClientOrder = () => {
     const [order, setOrder] = useState({});
-    const[file, setFile] = useState(null);
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const [file, setFile] = useState(null);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
         setFile(newFile);
         console.log(newFile)
     }
-    
+
     const handleBlur = e => {
         const newOrder = { ...order };
         newOrder[e.target.name] = e.target.value;
@@ -37,9 +38,9 @@ const ClientOrder = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img className="LOGO" src={LOGO} alt="" />
-                    <h6 ><Link to="/order">Order</Link></h6>
-                    <h6 > <Link to="/orderList">Service list</Link></h6>
-                    <h6 > <Link to="/orderReview">Review</Link></h6>
+                    <h6 className="OrderIcon" ><Link to="/order">Order</Link></h6>
+                    <h6 className="ServiceListIcon" > <Link to="/orderList">Service list</Link></h6>
+                    <h6 className="reviewIcon"> <Link to="/orderReview">Review</Link></h6>
                 </div>
                 <div class="col-md-8 ">
                     <h6 className="">Order</h6>
@@ -56,14 +57,16 @@ const ClientOrder = () => {
                             <input onBlur={handleBlur} type="text" className="form-control" name="design" placeholder="Graphic Design" />
                         </div>
                         <div className="form-group">
-                            <input onBlur={handleBlur} type="text" className="form-control" name="details" placeholder="Project Details" />
+                            <input onBlur={handleBlur} type="text" id="ProjectDetailsField" className="form-control" name="details" placeholder="Project Details" />
                         </div>
-                        <div className="form-group">
-                            <input onBlur={handleBlur} type="text" className="form-control" name="price" placeholder="Price" />
+                        <div className="row">
+                            <div className="form-group">
+                                <input onBlur={handleBlur} type="text" id="priceField" className="form-control" name="price" placeholder="Price" />
+                            </div>
+                            <div className="form-group">
+                                <input onChange={handleFileChange} type="file" className="form-control btn-success" name="image" placeholder="Upload image" />
+                            </div>
                         </div>
-                        <div className="form-group">
-                        <input onChange={handleFileChange} type="file" className="form-control btn-primary" name="image" placeholder="Upload image" />
-                    </div>
                         <button onClick={handleSubmit} type="submit" className="btn btn-dark">Send</button>
                     </form>
                 </div>

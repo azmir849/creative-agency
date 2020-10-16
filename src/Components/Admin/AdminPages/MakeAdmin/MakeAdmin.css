@@ -1,0 +1,14 @@
+.ClientMakeInputArea{
+    width: 800px;
+    height: 275px;
+    background:floralwhite;
+    border-radius: 10px;
+}
+
+.ClientMakeInputArea form{
+    padding: 30px;
+
+}
+.ClientMakeInputArea button{
+margin-left: 10px;
+}
