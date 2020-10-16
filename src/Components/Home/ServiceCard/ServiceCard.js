@@ -8,7 +8,7 @@ const ServiceCard = () => {
     const [serviceData, setServiceData] = useState([]);
 
     useEffect(() => {
-        const url = 'http://localhost:5000/Service';
+        const url = 'https://intense-reef-83461.herokuapp.com/Service';
         fetch(url)
             .then(res => res.json())
             .then(data => setServiceData(data));

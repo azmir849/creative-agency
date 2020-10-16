@@ -17,7 +17,7 @@ const ClientOrderReview = () => {
 
     const handleSubmit = () => {
         const newOrderReview = { ...review };
-        fetch('http://localhost:5000/addAReview', {
+        fetch('https://intense-reef-83461.herokuapp.com/addAReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

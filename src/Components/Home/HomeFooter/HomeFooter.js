@@ -13,7 +13,7 @@ const HomeFooter = () => {
 
     const handleSubmit = () => {
         const newHomeMessage = { ...message };
-        fetch('http://localhost:5000/addAMessage', {
+        fetch('https://intense-reef-83461.herokuapp.com/addAMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

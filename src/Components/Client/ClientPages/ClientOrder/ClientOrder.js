@@ -24,7 +24,7 @@ const ClientOrder = () => {
 
     const handleSubmit = () => {
         const newClientOrder = { ...order };
-        fetch('http://localhost:5000/addAOrder', {
+        fetch('https://intense-reef-83461.herokuapp.com/addAOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

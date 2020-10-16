@@ -24,7 +24,7 @@ const AddService = () => {
 
     const handleSubmit = () => {
         const newServiceInfo = { ...info };
-        fetch('http://localhost:5000/addAService', {
+        fetch('https://intense-reef-83461.herokuapp.com/addAService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

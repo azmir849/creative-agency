@@ -8,7 +8,7 @@ const ClientsFeedback = () => {
     const [reviewData, setReviewData] = useState([]);
 
     useEffect(() => {
-        const url = 'http://localhost:5000/Review';
+        const url = 'https://intense-reef-83461.herokuapp.com/Review';
         fetch(url)
             .then(res => res.json())
             .then(data => setReviewData(data));

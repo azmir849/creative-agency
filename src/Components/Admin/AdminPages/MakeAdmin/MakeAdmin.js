@@ -17,7 +17,7 @@ const MakeAdmin = () => {
 
     const handleSubmit = () => {
         const newServiceAdmin = { ...admin };
-        fetch('http://localhost:5000/addaAdmin', {
+        fetch('https://intense-reef-83461.herokuapp.com/addaAdmin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
