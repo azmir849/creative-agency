@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './LogIn.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../images/logos/logo.png'
 
 import * as firebase from "firebase/app";
@@ -9,17 +9,24 @@ import firebaseConfig from '../../firebase.config';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
 
-firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/order" } };
+
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
+
     const [user, setUser] = useState({
         isSignedIn: false,
         name: '',
         email: ''
     })
     const provider = new firebase.auth.GoogleAuthProvider();
+
     const handleSignIn = () => {
         firebase.auth().signInWithPopup(provider)
             .then(result => {
@@ -31,12 +38,22 @@ const LogIn = () => {
                 }
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
-                history.push('/order');
+                storeAuthToken();
             }).catch(error => {
                 console.log(error);
                 console.log(error.message);
             });
     }
+    const storeAuthToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+            .then(function (idToken) {
+                sessionStorage.setItem('token', idToken);
+                history.replace(from);
+            }).catch(function (error) {
+                // Handle error
+            });
+    }
+
     return (
         <div>
             <div>
